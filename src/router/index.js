@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Landingpage from "../views/Landingpage.vue";
+import LandingPage from "../views/LandingPage.vue";
+import LoginPage from "../views/LoginPage.vue";
 import SignUpPage from "../views/SignUpPage.vue";
 
 Vue.use(VueRouter);
@@ -8,8 +9,13 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "Landingpage",
-    component: Landingpage
+    name: "LandingPage",
+    component: LandingPage
+  },
+  {
+    path: "/Login",
+    name: "LoginPage",
+    component: LoginPage
   },
   {
     path: "/SignUp",

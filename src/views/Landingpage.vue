@@ -5,34 +5,44 @@
         <nav :class="nav ? 'nav-colored' : 'nav-transparent'">
           <div class="wrapper">
             <img alt="ASRAS Icon" src="../assets/icon.png" />
-            <h2 class="text-white">ASRAS</h2>
+            <h2 class="text-black">ASRAS</h2>
+            <div class="Links">
+              <router-link
+                v-for="routes in links"
+                v-bind:key="routes.id"
+                :to="`${routes.page}`"
+                >{{ routes.text }}</router-link
+              >
+            </div>
+            <!-- <router-link to="/LoginPage">Sign In</router-link> |
+            <router-link to="/SignUpPage">Sign Up</router-link> -->
           </div>
         </nav>
       </div>
-
-      <div class="signin-card">
-        <SigninCard />
-      </div>
-      <div class="system-info">
-        <SystemInfo />
-      </div>
+      <div></div>
     </div>
   </div>
 </template>
 
 <script>
-import SigninCard from "@/components/SigninCard";
-import SystemInfo from "@/components/systemInfo";
-
 export default {
-  name: "Landingpage",
-  components: {
-    SigninCard,
-    SystemInfo
-  },
+  name: "LandingPage",
+  components: {},
   data() {
     return {
-      nav: false
+      links: [
+        {
+          id: 0,
+          text: "Sign In | ",
+          page: "/Login"
+        },
+        {
+          id: 1,
+          text: "Sign Up",
+          page: "/SignUp"
+        }
+      ],
+      nav: true
     };
   },
   methods: {
@@ -56,11 +66,11 @@ export default {
   width: 100%;
   height: 100vw;
 }
-
 nav {
-  width: 100%;
+  position: fixed;
+  width: 100vw;
   background-color: #555;
-  height: 15vh;
+  height: 13vh;
 }
 
 .wrapper {
@@ -78,19 +88,14 @@ h2 {
   font-size: 35px;
 }
 .nav-colored {
-  background-image: linear-gradient(#13547a, #80d0c7);
+  background-image: linear-gradient(white, #80d0c7);
 }
 .nav-transparent {
   background-color: transparent;
 }
-.signin-card {
-  display: flexbox;
-  justify-content: center;
-  margin: 7vw;
-}
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
+.Links {
+  font-size: 20px;
+  margin-left: 900px;
+  margin-top: 20px;
 }
 </style>
