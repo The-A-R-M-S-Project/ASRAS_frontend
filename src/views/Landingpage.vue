@@ -2,32 +2,30 @@
   <div class="Landing">
     <div class="Background">
       <div class="row">
-        <nav :class="nav ? 'nav-colored' : 'nav-transparent'">
-          <div class="wrapper">
-            <img alt="ASRAS Icon" src="../assets/icon.png" />
-            <h2 class="text-black">ASRAS</h2>
-            <div class="Links">
-              <router-link
-                v-for="routes in links"
-                v-bind:key="routes.id"
-                :to="`${routes.page}`"
-                >{{ routes.text }}</router-link
-              >
-            </div>
-            <!-- <router-link to="/LoginPage">Sign In</router-link> |
-            <router-link to="/SignUpPage">Sign Up</router-link> -->
-          </div>
-        </nav>
+        <Navigation />
       </div>
-      <div></div>
+      <div class="carouselCard my">
+        <Carousel />
+      </div>
+      <div class="contactus">
+        <ContactUs />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import Carousel from "@/components/Carousel";
+import Navigation from "@/components/Navigation";
+import ContactUs from "@/components/ContactUS";
+
 export default {
   name: "LandingPage",
-  components: {},
+  components: {
+    Navigation,
+    Carousel,
+    ContactUs
+  },
   data() {
     return {
       links: [
@@ -53,49 +51,18 @@ export default {
 
 <style scoped>
 .Landing {
-  background-image: url("../assets/backgroundimage.jpg");
-  height: 100vw;
+  height: 100vh;
+  width: 100%;
   background-size: cover;
   overflow-x: hidden;
 }
 .Background {
-  background-color: rgba(65, 51, 87, 0.7);
-  position: absolute;
-  top: 0;
-  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
   width: 100%;
-  height: 100vw;
-}
-nav {
-  position: fixed;
-  width: 100vw;
-  background-color: #555;
-  height: 13vh;
-}
-
-.wrapper {
-  margin-top: 20px;
-  display: flex;
-}
-
-img {
-  margin-left: 40px;
-  width: 5%;
-  height: 4%;
+  height: 100vh;
 }
 
 h2 {
   font-size: 35px;
-}
-.nav-colored {
-  background-image: linear-gradient(white, #80d0c7);
-}
-.nav-transparent {
-  background-color: transparent;
-}
-.Links {
-  font-size: 20px;
-  margin-left: 900px;
-  margin-top: 20px;
 }
 </style>
