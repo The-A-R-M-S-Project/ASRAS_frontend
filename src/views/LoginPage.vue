@@ -35,7 +35,7 @@ export default {
 <style scoped>
 .Login {
   background-image: url("../assets/backgroundimage.jpg");
-  height: 100vw;
+  height: 100vh;
   background-size: cover;
   overflow-x: hidden;
 }
@@ -45,7 +45,7 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vw;
+  height: 100vh;
 }
 .signin-card {
   display: flexbox;
