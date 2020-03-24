@@ -10,6 +10,9 @@
       <div class="contactus">
         <ContactUs />
       </div>
+      <div class="footer">
+        <Footer />
+      </div>
     </div>
   </div>
 </template>
@@ -18,13 +21,15 @@
 import Carousel from "@/components/Carousel";
 import Navigation from "@/components/Navigation";
 import ContactUs from "@/components/ContactUS";
+import Footer from "@/components/footer.vue";
 
 export default {
   name: "LandingPage",
   components: {
     Navigation,
     Carousel,
-    ContactUs
+    ContactUs,
+    Footer
   },
   data() {
     return {
