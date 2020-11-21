@@ -46,8 +46,9 @@ export default {
 
 <style scoped>
 .mynav {
-  background: linear-gradient(white, #80d0c7);
+  background-color: whitesmoke;
   width: 100%;
+  position: fixed;
 }
 li {
   display: inline-block;
