@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import LandingPage from "../views/LandingPage.vue";
 import LoginPage from "../views/LoginPage.vue";
 import SignUpPage from "../views/SignUpPage.vue";
+import AdminPage from "../views/admin.vue";
 
 Vue.use(VueRouter);
 
@@ -21,10 +22,16 @@ const routes = [
     path: "/SignUp",
     name: "SignUpPage",
     component: SignUpPage
+  },
+  {
+    path: "/Admin",
+    name: "AdminPage",
+    component: AdminPage
   }
 ];
 
 const router = new VueRouter({
+  mode: "history",
   routes
 });
 
