@@ -1,10 +1,10 @@
 <template>
   <div class="Landing">
     <div class="Background">
-      <div class="row">
+      <div class="row navigation">
         <Navigation />
       </div>
-      <div class="carouselCard my">
+      <div class="carouselCard my" style="margin-top: 50px;">
         <Carousel />
       </div>
       <div class="contactus">
@@ -21,7 +21,7 @@
 import Carousel from "@/components/Carousel";
 import Navigation from "@/components/Navigation";
 import ContactUs from "@/components/ContactUS";
-import Footer from "@/components/footer.vue";
+import Footer from "@/components/footer";
 
 export default {
   name: "LandingPage",
