@@ -8,6 +8,7 @@
         :search-options="{
           enabled: true
         }"
+        theme="black-rhino"
       />
     </div>
   </div>
