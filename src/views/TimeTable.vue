@@ -1,6 +1,8 @@
 <template>
   <div>
     <!-- Navbar will go here -->
+    <Navigation />
+    <div class="top"></div>
     <div class="container">
       <vue-good-table
         :columns="columns"
@@ -17,10 +19,11 @@
 <script>
 import "vue-good-table/dist/vue-good-table.css";
 import { VueGoodTable } from "vue-good-table";
-
+import Navigation from "../components/AdminTopNav.vue";
 export default {
   components: {
-    VueGoodTable
+    VueGoodTable,
+    Navigation
   },
   name: "timetable",
   data() {
@@ -59,9 +62,8 @@ export default {
   }
 };
 </script>
-<style>
-.container {
-  margin-left: 200px;
-  margin-right: 200px;
+<style scoped>
+.top {
+  height: 10vh;
 }
 </style>

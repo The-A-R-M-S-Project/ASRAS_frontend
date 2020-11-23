@@ -25,12 +25,12 @@
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link">
-            <router-link to="/">HOME</router-link>
+            <router-link to="/admin">HOME</router-link>
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link">
-            <router-link to="/">SCHEDULE</router-link>
+            <router-link to="/timetable">SCHEDULE</router-link>
           </a>
         </li>
       </ul>
