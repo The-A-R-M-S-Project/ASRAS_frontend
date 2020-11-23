@@ -1,15 +1,18 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
 import Timetable from "../views/TimeTable.vue";
+import LandingPage from "../views/LandingPage.vue";
+import LoginPage from "../views/LoginPage.vue";
+import SignUpPage from "../views/SignUpPage.vue";
+import AdminPage from "../views/admin.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "home",
-    component: Home
+    name: "LandingPage",
+    component: LandingPage
   },
   {
     path: "/timetable",
@@ -17,13 +20,19 @@ const routes = [
     component: Timetable
   },
   {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
+    path: "/Login",
+    name: "LoginPage",
+    component: LoginPage
+  },
+  {
+    path: "/SignUp",
+    name: "SignUpPage",
+    component: SignUpPage
+  },
+  {
+    path: "/Admin",
+    name: "AdminPage",
+    component: AdminPage
   }
 ];
 
