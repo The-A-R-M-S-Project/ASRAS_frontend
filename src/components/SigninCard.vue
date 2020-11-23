@@ -32,7 +32,9 @@
           name="login"
           placeholder="password"
         />
-        <input type="submit" class="fadeIn fourth" value="Log In" />
+        <router-link to="/admin"
+          ><input type="submit" class="fadeIn fourth" value="Log In"
+        /></router-link>
       </form>
 
       <!-- Remind Passowrd -->
